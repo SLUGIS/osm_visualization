@@ -7,7 +7,7 @@ https://github.com/oeon/osm_visualization/blob/master/data/retrieve-day
 
 Run:
 
-    $ ./retrieve-day arg1 arg2
+`$ ./retrieve-day arg1 arg2`
 
 Where:
 
@@ -18,7 +18,7 @@ The Script is based in : https://github.com/ericfischer/ebola/blob/master/retrie
 
 Example:
 
-    ~/osm_visualization/data$ ./retrieve-day 448 574
+`~/osm_visualization/data$ ./retrieve-day 448 574`
 
 ### Convert data to Geojson file
 
@@ -27,7 +27,7 @@ modified from: https://github.com/ericfischer/ebola/blob/master/get-mamou-edits
 
 Run: 
 
-    $ ./get-edits file minlat minlon maxlat maxlon > newfile.geojson
+`$ ./get-edits file minlat minlon maxlat maxlon > newfile.geojson`
  
 Example bounding box from San Francisco:
 
@@ -38,62 +38,55 @@ Example bounding box from San Francisco:
 
 Process a file
     
-    Example: 
+Example: 
 
-    ~/osm_visualization/data$ ./get-edits 485.osc.gz 37.716045 -122.51781 37.817006 -122.34924 > sf485.geojson
-
+`~/osm_visualization/data$ ./get-edits 485.osc.gz 37.716045 -122.51781 37.817006 -122.34924 > sf485.geojson`
 
 It is possible to execute all the files:
 
 Run:
 
-  
-  $ ./process_all start_file end_file minlat minlon maxlat maxlon
-
+`$ ./process_all start_file end_file minlat minlon maxlat maxlon`
 
 Example: 
 
-
-    ~/osm_visualization/data$ ./process_all 484 574 37.716045 -122.51781 37.817006 -122.34924 
-
+` ~/osm_visualization/data$ ./process_all 484 574 37.716045 -122.51781 37.817006 -122.34924`
 
 It will take a while depending on the number of files.
 
 If you want to process the file for some especific user use the file, you have to edit the file: https://github.com/oeon/osm_visualization/blob/master/data/get-edits-by-users, 
 specifically the line https://github.com/oeon/osm_visualization/blob/master/data/get-edits-by-users#L69 and add more users, then 
 
-Run
+Run:
 
-    $ ./get-edits file minlat minlon maxlat maxlon > newfile.geojson
+`$ ./get-edits file minlat minlon maxlat maxlon > newfile.geojson`
 
 Example:
 
-    ~/osm_visualization/data$ ./get-edits-by-users 499.osc.gz 37.716045 -122.51781 37.817006 -122.34924 > sf499-users.geojson
+`~/osm_visualization/data$ ./get-edits-by-users 499.osc.gz 37.716045 -122.51781 37.817006 -122.34924 > sf499-users.geojson`
 
 Example processing for all users:
 
-    ~/osm_visualization/data$ ./process_all_users 1 776 34.89752 -121.34792 35.79522 -119.47262
+`~/osm_visualization/data$ ./process_all_users 1 776 34.89752 -121.34792 35.79522 -119.47262`
 
 ### Creating png files
 
  You need to install [Tilemill](https://www.mapbox.com/tilemill), and  clone [Projectmill](https://github.com/mapbox/projectmill)
 
-      git clone https://github.com/mapbox/projectmill.git
+`git clone https://github.com/mapbox/projectmill.git`
 
 #### Get a background PNG File:
 
-In this case we need satelital imagen : 
-
-we use  ericfischer' project [tile-stitch](https://github.com/ericfischer/tile-stitch), cloning in your machine an run:
+In this case we need a satellite image. We use Eric Fischer's project [tile-stitch](https://github.com/ericfischer/tile-stitch), cloning in your machine an run:
 
     
-    ruben@rub21:~/tile-stitch$ ./stitch -o sf.png -- 37.6787  -122.5171 37.8270 -122.3338 13 http://a.tiles.mapbox.com/v3/openstreetmap.map-4wvf9l0l/{z}/{x}/{y}.png
+`~/tile-stitch$ ./stitch -o sf.png -- 37.6787  -122.5171 37.8270 -122.3338 13 http://a.tiles.mapbox.com/v3/openstreetmap.map-4wvf9l0l/{z}/{x}/{y}.png`
 
-then we check the size of imagen: in my cas is :  "width":1068, "height":1093
+Then we check the size of the image: in my case it's:  "width":1068, "height":1093
 
 #### Create a project in Tilemill:
 
-I create a project in Tilemill called sfbuildings: https://github.com/Rub21/osm_visualization/tree/master/tilemill-project/sfbuildings
+Create a project in Tilemill called sfbuildings: https://github.com/Rub21/osm_visualization/tree/master/tilemill-project/sfbuildings
 
 #### Configuration in Projectmill
 
