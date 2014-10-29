@@ -66,7 +66,7 @@ sub handle_end {
 
 
 			if ($lat[$i] != 0 && $lat[$i + 1] != 0) {
-				if($user eq "ediyes" || $user eq "Rub21" || $user eq "Luis36995"){
+				if($user eq "j03lar50n" || $user eq "chadbunn" || $user eq "Kat Konstantinidis" || $user eq "Station 42" || $user eq "michaelaL" || $user eq "jotaylor" || $user eq "Chief Tri-tip" || $user eq "Marshy8" || $user eq "JuliaEstrada" || $user eq "briandelro" || $user eq "Station 10" || $user eq "slocoff" || $user eq "JonCPSU" || $user eq "Shanniga10" || $user eq "slo_osm_imports" || $user eq "devinpp" || $user eq "tdavisson_td" || $user eq "tabiko" || $user eq "MLuna" || $user eq "hpanno" || $user eq "CoreyFarwell" || $user eq "Karen Sullivan" || $user eq "DJuarez" || $user eq "cbergin" || $user eq "Brad DeBranch" || $user eq "RoccoMap21" || $user eq "danziebron" || $user eq "Ryangee727" || $user eq "DrChapman" || $user eq "nl519"){
 					print "   {
 			      \"type\": \"Feature\",
 			      \"properties\": {\"user\":\"$user\"},
