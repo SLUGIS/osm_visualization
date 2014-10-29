@@ -3,7 +3,7 @@ osm_visualization
 ### Download the OSM files 
 Download the daily improvement files in OSM from: http://planet.openstreetmap.org/replication/day/000/000/
 
-https://github.com/Rub21/osm_visualization/blob/master/data/retrieve-day
+https://github.com/oeon/osm_visualization/blob/master/data/retrieve-day
 
 Run:
 
@@ -18,19 +18,18 @@ The Script is based in : https://github.com/ericfischer/ebola/blob/master/retrie
 
 Example:
 
-    ruben@rub21:~/osm_visualization/data$ ./retrieve-day 448 574
+    ~/osm_visualization/data$ ./retrieve-day 448 574
 
 ### Convert data to Geojson file
 
-we use: https://github.com/Rub21/osm_visualization/blob/master/data/get-edits:
+we use: https://github.com/oeon/osm_visualization/blob/master/data/get-edits:
 modified from: https://github.com/ericfischer/ebola/blob/master/get-mamou-edits
 
 Run: 
 
     $ ./get-edits file minlat minlon maxlat maxlon > newfile.geojson
  
-Example:
-Bounds from San Francisco:
+Example bounding box from San Francisco:
 
     $minlat = 37.716045;
     $minlon = -122.51781;
@@ -41,10 +40,10 @@ Process a file
     
     Example: 
 
-    ruben@rub21:~/osm_visualization/data$ ./get-edits 485.osc.gz 37.716045 -122.51781 37.817006 -122.34924 > sf485.geojson
+    ~/osm_visualization/data$ ./get-edits 485.osc.gz 37.716045 -122.51781 37.817006 -122.34924 > sf485.geojson
 
 
-Is possible to execute all the files:
+It is possible to execute all the files:
 
 Run:
 
@@ -55,13 +54,13 @@ Run:
 Example: 
 
 
-    ruben@rub21:~/osm_visualization/data$ ./process_all 484 574 37.716045 -122.51781 37.817006 -122.34924 
+    ~/osm_visualization/data$ ./process_all 484 574 37.716045 -122.51781 37.817006 -122.34924 
 
 
-It will take a while depending on the number of files are.
+It will take a while depending on the number of files.
 
-If you want to process the file for some especific user use the file, you have to edit the file: https://github.com/Rub21/osm_visualization/blob/master/data/get-edits-by-users, 
-exactly  the line https://github.com/Rub21/osm_visualization/blob/master/data/get-edits-by-users#L64  and add more users, then 
+If you want to process the file for some especific user use the file, you have to edit the file: https://github.com/oeon/osm_visualization/blob/master/data/get-edits-by-users, 
+specifically the line https://github.com/oeon/osm_visualization/blob/master/data/get-edits-by-users#L69 and add more users, then 
 
 Run
 
@@ -69,8 +68,11 @@ Run
 
 Example:
 
-    ruben@rub21:~/osm_visualization/data$ ./get-edits-by-users 499.osc.gz 37.716045 -122.51781 37.817006 -122.34924 > sf499-users.geojson
+    ~/osm_visualization/data$ ./get-edits-by-users 499.osc.gz 37.716045 -122.51781 37.817006 -122.34924 > sf499-users.geojson
 
+Example processing for all users:
+
+    ~/osm_visualization/data$ ./process_all_users 1 776 34.89752 -121.34792 35.79522 -119.47262
 
 ### Creating png files
 
