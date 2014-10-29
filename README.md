@@ -115,7 +115,7 @@ We need to configure this file https://github.com/oeon/osm_visualization/blob/ma
 
 Run:
 
-`$ python config.py arg1 arg2`
+`$ python make-config.py arg1 arg2`
 
 where:
 arg1: is the number of the first file that we downloaded before.
@@ -123,7 +123,7 @@ arg2: is the number of the last file that we downloaded before.
 
 Example:
 
-`~/projectmill$ python config.py 484 574`
+`~/projectmill$ python make-config.py 484 574`
 
 and then execute:
 
