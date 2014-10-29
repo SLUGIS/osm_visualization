@@ -86,25 +86,25 @@ Then we check the size of the image: in my case it's:  "width":1068, "height":10
 
 #### Create a project in Tilemill:
 
-Create a project in Tilemill called sfbuildings: https://github.com/Rub21/osm_visualization/tree/master/tilemill-project/sfbuildings
+Create a project in Tilemill called sfbuildings: https://github.com/oeon/osm_visualization/tree/master/tilemill-project/sluosm2014
 
 #### Configuration in Projectmill
 
-We need to configure this file https://github.com/Rub21/osm_visualization/blob/master/make-config.py, the exact lines are:
+We need to configure this file https://github.com/oeon/osm_visualization/blob/master/make-config.py, the exact lines are:
 
     project={
-            "source": "sfbuildings", #name of projet in Tilemill
-            "destination": "sf"+ str(x),
+            "source": "sluosm2014", #name of projet in Tilemill
+            "destination": "slo"+ str(x),
             "format": "png",
             "minzoom": 1,
             "maxzoom": 16,
-            "width":1068, #it is a width form satelital imagen
-            "height":1093, #it is a height form satelital imagen
+            "width":1068, #width from tile-stitch image
+            "height":1093, #height from tile-stitch image
             "mml": {
                     "Layer": [
                       {                                        
                                   "Datasource": {
-                                  "file": "/home/ruben/osm_visualization/data/sf"+str(x)+".geojson"  #directory of files for process
+                                  "file": "/home/ubuntu/osm_visualization/data/slo"+str(x)+".geojson"  #directory of files for process
                                 }
                   
                       }
