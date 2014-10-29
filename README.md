@@ -83,7 +83,7 @@ Then we check the size of the image: in my case it's:  "width":5462, "height":32
 
 #### Create a project in Tilemill:
 
-Create a project in Tilemill called sfbuildings: https://github.com/oeon/osm_visualization/tree/master/tilemill-project/sluosm2014
+Create a project in Tilemill called sluosm2014: https://github.com/oeon/osm_visualization/tree/master/tilemill-project/sluosm2014
 
 #### Configuration in Projectmill
 
@@ -115,12 +115,11 @@ We need to configure this file https://github.com/oeon/osm_visualization/blob/ma
 
 Run:
 
-    $ python config.py arg1 arg2
+`$ python config.py arg1 arg2`
 
 where:
 arg1: is the number of the first file that we downloaded before.
 arg2: is the number of the last file that we downloaded before.
-
 
 Example:
 
@@ -134,13 +133,11 @@ After:
 
 That files are created in: /home/ubuntu/Documents/MapBox/export.
 
-
 ### Created a GIF File
 
-Copy and paste the satelital imagen from folder  tile-stitch to /MapBox/export and renamed the file  a  smaller number of the first file that was created by Tilemill:
+Copy and paste the tile-stitch image from tile-stitch to /MapBox/export and rename the file to one incremental digit less than the first file that was created by Tilemill:
 
-my first file is called: sf484.png, I renamed the imagen file to sf483.png and then run:
-
+The first file is called slo484.png, so the tile-stitch file was named to slo483.png. Then run:
 
 Example:
 
