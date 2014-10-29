@@ -12,7 +12,7 @@ config_json=[]
 
 for x in range(int(argv[1]), int(argv[2])+1):
     project={
-            "source": "slo",
+            "source": "sluosm2014",
             "destination": "slo"+ str(x),
             "format": "png",
             "minzoom": 1,
