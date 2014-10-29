@@ -1,3 +1,0 @@
-#line{
-  line-color: red;
-}
