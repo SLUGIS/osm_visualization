@@ -12,8 +12,8 @@ config_json=[]
 
 for x in range(int(argv[1]), int(argv[2])+1):
     project={
-            "source": "sf",
-            "destination": "sf"+ str(x),
+            "source": "slo",
+            "destination": "slo"+ str(x),
             "format": "png",
             "minzoom": 1,
             "maxzoom": 16,
@@ -23,7 +23,7 @@ for x in range(int(argv[1]), int(argv[2])+1):
                     "Layer": [
                       {                                        
                                   "Datasource": {
-                                  "file": "/home/ruben/Apps/visualization/data/sf"+str(x)+".geojson"
+                                  "file": "/home/ubuntu/osm_visualization/data/slo"+str(x)+".geojson"
                                 }
                   
                       }
