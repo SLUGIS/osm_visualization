@@ -29,18 +29,18 @@ Run:
 
 `$ ./get-edits file minlat minlon maxlat maxlon > newfile.geojson`
  
-Example bounding box from San Francisco:
+Example bounding box from San Luis Obispo:
 
-    $minlat = 37.716045;
-    $minlon = -122.51781;
-    $maxlat = 37.817006;
-    $maxlon = -122.34924;
+    $minlat = 34.89752;
+    $minlon = -121.34792;
+    $maxlat = 35.79522;
+    $maxlon = -119.47262;
 
 Process a file
     
 Example: 
 
-`~/osm_visualization/data$ ./get-edits 485.osc.gz 37.716045 -122.51781 37.817006 -122.34924 > sf485.geojson`
+`~/osm_visualization/data$ ./get-edits 485.osc.gz 34.89752 -121.34792 35.79522 -119.47262 > slo485.geojson`
 
 It is possible to execute all the files:
 
@@ -50,7 +50,7 @@ Run:
 
 Example: 
 
-` ~/osm_visualization/data$ ./process_all 484 574 37.716045 -122.51781 37.817006 -122.34924`
+` ~/osm_visualization/data$ ./process_all 484 574 34.89752 -121.34792 35.79522 -119.47262`
 
 It will take a while depending on the number of files.
 
@@ -63,7 +63,7 @@ Run:
 
 Example:
 
-`~/osm_visualization/data$ ./get-edits-by-users 499.osc.gz 37.716045 -122.51781 37.817006 -122.34924 > sf499-users.geojson`
+`~/osm_visualization/data$ ./get-edits-by-users 499.osc.gz 34.89752 -121.34792 35.79522 -119.47262 > slo499-users.geojson`
 
 Example processing for all users:
 
@@ -77,12 +77,9 @@ Example processing for all users:
 
 #### Get a background PNG File:
 
-In this case we need a satellite image. We use Eric Fischer's project [tile-stitch](https://github.com/ericfischer/tile-stitch), cloning in your machine an run:
+In this case we need a satellite image. We use Eric Fischer's project [tile-stitch](https://github.com/ericfischer/tile-stitch), clone to your machine and run.
 
-    
-`~/tile-stitch$ ./stitch -o sf.png -- 37.6787  -122.5171 37.8270 -122.3338 13 http://a.tiles.mapbox.com/v3/openstreetmap.map-4wvf9l0l/{z}/{x}/{y}.png`
-
-Then we check the size of the image: in my case it's:  "width":1068, "height":1093
+Then we check the size of the image: in my case it's:  "width":5462, "height":3205
 
 #### Create a project in Tilemill:
 
@@ -98,8 +95,8 @@ We need to configure this file https://github.com/oeon/osm_visualization/blob/ma
             "format": "png",
             "minzoom": 1,
             "maxzoom": 16,
-            "width":1068, #width from tile-stitch image
-            "height":1093, #height from tile-stitch image
+            "width":5462, #width from tile-stitch image
+            "height":3205, #height from tile-stitch image
             "mml": {
                     "Layer": [
                       {                                        
@@ -121,21 +118,21 @@ Run:
     $ python config.py arg1 arg2
 
 where:
-arg1: is the number of the first file  that we dowload before.
-arg2: is the number of the last file  that we dowload before.
+arg1: is the number of the first file that we downloaded before.
+arg2: is the number of the last file that we downloaded before.
 
 
 Example:
 
-    ruben@rub21:~/visualization/projectmill$ python config.py 484 574
+`~/projectmill$ python config.py 484 574`
 
 and then execute:
 
-   	ruben@rub21:~/Apps/visualization/projectmill$ ./index.js --mill  --render  -c config.json -f -t /usr/share/tilemill
+`~/projectmill$ ./index.js --mill  --render  -c config.json -f -t /usr/share/tilemill`
 
 After:
 
-That files are created in: /home/ruben/Documents/MapBox/export.
+That files are created in: /home/ubuntu/Documents/MapBox/export.
 
 
 ### Created a GIF File
@@ -147,11 +144,11 @@ my first file is called: sf484.png, I renamed the imagen file to sf483.png and t
 
 Example:
 
-	ruben@rub21:~/Documents/MapBox/export$ mogrify -format gif *.png && gifsicle *.gif > anim.gif
-	ruben@rub21:~/Documents/MapBox/export$ gifsicle --loop=0 --colors 256 *.gif > anim.gif
+`~/Documents/MapBox/export$ mogrify -format gif *.png && gifsicle *.gif > anim.gif`
+`~/Documents/MapBox/export$ gifsicle --loop=0 --colors 256 *.gif > anim.gif`
 
 The result is:
 
 ![](https://cloud.githubusercontent.com/assets/1152236/2662166/48d7280c-c038-11e3-94fd-05002489803d.gif)
 
-Source for mae a gif: http://www.lcdf.org/gifsicle/man.html
+Source for making a gif: http://www.lcdf.org/gifsicle/man.html
