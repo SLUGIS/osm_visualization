@@ -32,7 +32,7 @@
       "Datasource": {
         "file": "C:\\Users\\jlarson\\Desktop\\slo776.geojson",
         "id": "line",
-        "project": "sluosm2014",
+        "project": "sluosm2014n",
         "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
       },
       "srs-name": "WGS84",
@@ -43,7 +43,7 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "name": "sluosm2014",
+  "name": "sluosm2014n",
   "description": "",
   "attribution": ""
 }
