@@ -84,20 +84,20 @@ Example processing for all users:
 
 #### Get a background PNG File:
 
-In this case we need a satellite image. We use Eric Fischer's project [tile-stitch](https://github.com/ericfischer/tile-stitch), clone to your machine and run.
+In this case we used a Mapbox Studio High Contrast image. We use Eric Fischer's project [tile-stitch](https://github.com/ericfischer/tile-stitch), clone to your machine and run.
 
 Then we check the size of the image: in my case it's:  "width":939, "height":748
 
 #### Create a project in Tilemill:
 
-Create a project in Tilemill called sluosm2014, we used a north & south: https://github.com/oeon/osm_visualization/tree/master/tilemill-project/sluosm2014n (north)
+Create a project in Tilemill called sluosm2014, we used a north & south: https://github.com/oeon/osm_visualization/tree/master/tilemill-project/sluosm2014n (e.g., North)
 
 #### Configuration in Projectmill
 
 We need to configure this file https://github.com/oeon/osm_visualization/blob/master/make-config.py, the exact lines are:
 
     project={
-            "source": "sluosm2014", #name of projet in Tilemill
+            "source": "sluosm2014n", #name of projet in Tilemill
             "destination": "slo"+ str(x),
             "format": "png",
             "minzoom": 1,
@@ -144,7 +144,7 @@ That files are created in: /home/ubuntu/Documents/MapBox/export.
 
 Copy and paste the tile-stitch image from tile-stitch to /MapBox/export and rename the file to one incremental digit less than the first file that was created by Tilemill:
 
-The first file is called slo484.png, so the tile-stitch file was named to slo483.png. Then run:
+The first file is called slo415.png, so the tile-stitch file was named to slo414.png. Then run:
 
 Example:
 
