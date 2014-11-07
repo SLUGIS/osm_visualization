@@ -152,7 +152,9 @@ Example:
 `~/Documents/MapBox/export$ gifsicle --loop=0 --colors 256 *.gif > anim.gif`
 
 The result is:
-
+###North SLO County
 ![](https://dl.dropboxusercontent.com/u/345322813/anim-slo-north.gif)
+###South SLO County
+![](https://dl.dropboxusercontent.com/u/345322813/anim-slo-south.gif)
 
 Source for making a gif: http://www.lcdf.org/gifsicle/man.html
