@@ -11,14 +11,14 @@ Run:
 
 Where:
 
-- arg1 is: 01/09/2014 = 484 (start file)
-- arg2 is: 04/09/2014 = 574 (end file)
+- arg1 is: 11/01/2013 = 415 (start file)
+- arg2 is: 11/01/2014 = 780 (end file)
 
 The Script is based in : https://github.com/ericfischer/ebola/blob/master/retrieve-hourly
 
 Example:
 
-`~/osm_visualization/data$ ./retrieve-day 448 574`
+`~/osm_visualization/data$ ./retrieve-day 415 780`
 
 ### Convert data to Geojson file
 
@@ -29,18 +29,25 @@ Run:
 
 `$ ./get-edits file minlat minlon maxlat maxlon > newfile.geojson`
  
-Example bounding box from San Luis Obispo:
+Example bounding box from North San Luis Obispo County:
 
-    $minlat = 34.89752;
-    $minlon = -121.34792;
-    $maxlat = 35.79522;
-    $maxlon = -119.47262;
+    $minlat = 35.361056;
+    $minlon = -120.977325;
+    $maxlat = 35.778828;
+    $maxlon = -120.331879;
+
+Example bounding box from North San Luis Obispo County:
+
+    $minlat = 34.992316;
+    $minlon = -120.901794;
+    $maxlat = 35.398566;
+    $maxlon = -120.355225;
 
 Process a file
     
 Example: 
 
-`~/osm_visualization/data$ ./get-edits 485.osc.gz 34.89752 -121.34792 35.79522 -119.47262 > slo485.geojson`
+`~/osm_visualization/data$ ./get-edits 415.osc.gz 34.89752 -121.34792 35.79522 -119.47262 > slo415.geojson`
 
 It is possible to execute all the files:
 
@@ -50,7 +57,7 @@ Run:
 
 Example: 
 
-` ~/osm_visualization/data$ ./process_all 484 574 34.89752 -121.34792 35.79522 -119.47262`
+` ~/osm_visualization/data$ ./process_all 415 780 34.89752 -121.34792 35.79522 -119.47262`
 
 It will take a while depending on the number of files.
 
@@ -63,11 +70,11 @@ Run:
 
 Example:
 
-`~/osm_visualization/data$ ./get-edits-by-users 499.osc.gz 34.89752 -121.34792 35.79522 -119.47262 > slo499-users.geojson`
+`~/osm_visualization/data$ ./get-edits-by-users 415.osc.gz 34.89752 -121.34792 35.79522 -119.47262 > slo499-users.geojson`
 
 Example processing for all users:
 
-`~/osm_visualization/data$ ./process_all_users 1 776 34.89752 -121.34792 35.79522 -119.47262`
+`~/osm_visualization/data$ ./process_all_users 415 780 34.89752 -121.34792 35.79522 -119.47262`
 
 ### Creating png files
 
@@ -79,11 +86,11 @@ Example processing for all users:
 
 In this case we need a satellite image. We use Eric Fischer's project [tile-stitch](https://github.com/ericfischer/tile-stitch), clone to your machine and run.
 
-Then we check the size of the image: in my case it's:  "width":5462, "height":3205
+Then we check the size of the image: in my case it's:  "width":939, "height":748
 
 #### Create a project in Tilemill:
 
-Create a project in Tilemill called sluosm2014: https://github.com/oeon/osm_visualization/tree/master/tilemill-project/sluosm2014
+Create a project in Tilemill called sluosm2014, we used a north & south: https://github.com/oeon/osm_visualization/tree/master/tilemill-project/sluosm2014n (north)
 
 #### Configuration in Projectmill
 
@@ -95,8 +102,8 @@ We need to configure this file https://github.com/oeon/osm_visualization/blob/ma
             "format": "png",
             "minzoom": 1,
             "maxzoom": 16,
-            "width":5462, #width from tile-stitch image
-            "height":3205, #height from tile-stitch image
+            "width":939, #width from tile-stitch image
+            "height":748, #height from tile-stitch image
             "mml": {
                     "Layer": [
                       {                                        
@@ -123,7 +130,7 @@ arg2: is the number of the last file that we downloaded before.
 
 Example:
 
-`~/projectmill$ python make-config.py 484 574`
+`~/projectmill$ python make-config.py 415 780`
 
 and then execute:
 
