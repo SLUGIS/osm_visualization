@@ -12,13 +12,13 @@ config_json=[]
 
 for x in range(int(argv[1]), int(argv[2])+1):
     project={
-            "source": "sluosm2014",
+            "source": "sluosm2014n",
             "destination": "slo"+ str(x),
             "format": "png",
             "minzoom": 1,
             "maxzoom": 16,
-            "width":1068,
-            "height":1093,
+            "width":939,
+            "height":738,
             "mml": {
                     "Layer": [
                       {                                        
