@@ -153,6 +153,6 @@ Example:
 
 The result is:
 
-![](https://cloud.githubusercontent.com/assets/1152236/2662166/48d7280c-c038-11e3-94fd-05002489803d.gif)
+![](https://dl.dropboxusercontent.com/u/345322813/anim-slo-north.gif)
 
 Source for making a gif: http://www.lcdf.org/gifsicle/man.html
