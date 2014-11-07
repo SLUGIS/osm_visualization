@@ -70,7 +70,7 @@ Run:
 
 Example:
 
-`~/osm_visualization/data$ ./get-edits-by-users 415.osc.gz 34.89752 -121.34792 35.79522 -119.47262 > slo499-users.geojson`
+`~/osm_visualization/data$ ./get-edits-by-users 415.osc.gz 34.89752 -121.34792 35.79522 -119.47262 > slo415-users.geojson`
 
 Example processing for all users:
 
