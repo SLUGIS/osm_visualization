@@ -1,9 +1,14 @@
 osm_visualization
 =================
+###North SLO County
+![](https://dl.dropboxusercontent.com/u/345322813/anim-slo-north.gif)
+###South SLO County
+![](https://dl.dropboxusercontent.com/u/345322813/anim-slo-south.gif)
+
 ### Download the OSM files 
 Download the daily improvement files in OSM from: http://planet.openstreetmap.org/replication/day/000/000/
 
-https://github.com/oeon/osm_visualization/blob/master/data/retrieve-day
+https://github.com/SLUGIS/osm_visualization/blob/master/data/retrieve-day
 
 Run:
 
@@ -22,7 +27,7 @@ Example:
 
 ### Convert data to Geojson file
 
-we use: https://github.com/oeon/osm_visualization/blob/master/data/get-edits:
+we use: https://github.com/SLUGIS/osm_visualization/blob/master/data/get-edits:
 modified from: https://github.com/ericfischer/ebola/blob/master/get-mamou-edits
 
 Run: 
@@ -36,20 +41,20 @@ Example bounding box from North San Luis Obispo County:
     $maxlat = 35.778828;
     $maxlon = -120.331879;
 
-Example bounding box from North San Luis Obispo County:
+Example bounding box from South San Luis Obispo County:
 
     $minlat = 34.992316;
     $minlon = -120.901794;
     $maxlat = 35.398566;
     $maxlon = -120.355225;
 
-Process a file
+Process a single file
     
 Example: 
 
 `~/osm_visualization/data$ ./get-edits 415.osc.gz 34.89752 -121.34792 35.79522 -119.47262 > slo415.geojson`
 
-It is possible to execute all the files:
+It is possible to process all the files:
 
 Run:
 
@@ -61,8 +66,8 @@ Example:
 
 It will take a while depending on the number of files.
 
-If you want to process the file for some especific user use the file, you have to edit the file: https://github.com/oeon/osm_visualization/blob/master/data/get-edits-by-users, 
-specifically the line https://github.com/oeon/osm_visualization/blob/master/data/get-edits-by-users#L69 and add more users, then 
+If you want to process the file for some especific user use the file, you have to edit the file: https://github.com/SLUGIS/osm_visualization/blob/master/data/get-edits-by-users, 
+specifically the line https://github.com/SLUGIS/osm_visualization/blob/master/data/get-edits-by-users#L69 and add more users, then 
 
 Run:
 
@@ -90,11 +95,11 @@ Then we check the size of the image: in my case it's:  "width":939, "height":748
 
 #### Create a project in Tilemill:
 
-Create a project in Tilemill called sluosm2014, we used a north & south: https://github.com/oeon/osm_visualization/tree/master/tilemill-project/sluosm2014n (e.g., North)
+Create a project in Tilemill called sluosm2014, we used a north & south: https://github.com/SLUGIS/osm_visualization/tree/master/tilemill-project/sluosm2014n (e.g., North)
 
 #### Configuration in Projectmill
 
-We need to configure this file https://github.com/oeon/osm_visualization/blob/master/make-config.py, the exact lines are:
+We need to configure this file https://github.com/SLUGIS/osm_visualization/blob/master/make-config-n.py, the exact lines are:
 
     project={
             "source": "sluosm2014n", #name of projet in Tilemill
@@ -122,7 +127,7 @@ We need to configure this file https://github.com/oeon/osm_visualization/blob/ma
 
 Run:
 
-`$ python make-config.py arg1 arg2`
+`$ python make-config-n.py arg1 arg2`
 
 where:
 arg1: is the number of the first file that we downloaded before.
@@ -130,7 +135,7 @@ arg2: is the number of the last file that we downloaded before.
 
 Example:
 
-`~/projectmill$ python make-config.py 415 780`
+`~/projectmill$ python make-config-n.py 415 780`
 
 and then execute:
 
@@ -150,11 +155,5 @@ Example:
 
 `~/Documents/MapBox/export$ mogrify -format gif *.png && gifsicle *.gif > anim.gif`
 `~/Documents/MapBox/export$ gifsicle --loop=0 --colors 256 *.gif > anim.gif`
-
-The result is:
-###North SLO County
-![](https://dl.dropboxusercontent.com/u/345322813/anim-slo-north.gif)
-###South SLO County
-![](https://dl.dropboxusercontent.com/u/345322813/anim-slo-south.gif)
 
 Source for making a gif: http://www.lcdf.org/gifsicle/man.html
