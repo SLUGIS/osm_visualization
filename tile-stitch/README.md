@@ -9,6 +9,11 @@
 11/1/2013 to 11/1/2014
 
 ###version2
+
+north, bboxfinder: http://bboxfinder.com/#35.348176,-121.347920,35.795220,-119.472620
+
 ./stitch -o highcont-slu-north2.png -- 35.348176 -121.347920 35.795220 -119.472620 11 https://api.tiles.mapbox.com/v4/{map.id}/{z}/{x}/{y}.png?access_token=pk.ey
+
+south, bboxfinder: http://bboxfinder.com/#34.897520,-121.347920,35.348176,-119.472620
 
 ./stitch -o highcont-slu-south2.png -- 34.897520 -121.347920 35.348176 -119.472620 11 https://api.tiles.mapbox.com/v4/{map.id}/{z}/{x}/{y}.png?access_token=pk.ey
