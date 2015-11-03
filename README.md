@@ -1,9 +1,9 @@
 osm_visualization
 =================
 ###North SLO County
-![](https://dl.dropboxusercontent.com/u/345322813/anim-slo-north.gif)
+![](http://i.imgur.com/zRVZrfU.gif)
 ###South SLO County
-![](https://dl.dropboxusercontent.com/u/345322813/anim-slo-south.gif)
+![](http://i.imgur.com/h23wOTS.gif)
 
 ### Download the OSM files 
 Download the daily improvement files in OSM from: http://planet.openstreetmap.org/replication/day/000/000/
