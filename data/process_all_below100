@@ -1,0 +1,10 @@
+#!/bin/bash
+minlat=$3
+minlon=$4
+maxlat=$5
+maxlon=$6
+
+for i in $(cat osc_list.txt)
+do
+	./get-edits $i.osc.gz $minlat $minlon $maxlat $maxlon > sl$i.geojson
+done
