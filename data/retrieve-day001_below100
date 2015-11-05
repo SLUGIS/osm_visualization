@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in $(cat osc_list.txt)
+do	
+	curl -O http://planet.openstreetmap.org/replication/day/000/001/$i.osc.gz
+	#echo http://planet.openstreetmap.org/replication/day/000/001/${i}.osc.gz
+done
