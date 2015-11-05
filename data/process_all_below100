@@ -1,8 +1,8 @@
 #!/bin/bash
-minlat=$3
-minlon=$4
-maxlat=$5
-maxlon=$6
+minlat=$1
+minlon=$2
+maxlat=$3
+maxlon=$4
 
 for i in $(cat osc_list.txt)
 do
