@@ -6,13 +6,15 @@ osm_visualization
 ![](http://i.imgur.com/h23wOTS.gif)
 
 ### Download the OSM files 
-Download the daily improvement files in OSM from: http://planet.openstreetmap.org/replication/day/000/000/
+Download the daily improvement files in OSM from: http://planet.openstreetmap.org/replication/day/000/000/ and http://planet.openstreetmap.org/replication/day/000/001/
 
-https://github.com/SLUGIS/osm_visualization/blob/master/data/retrieve-day
+https://github.com/SLUGIS/osm_visualization/blob/master/data/retrieve-day000
+https://github.com/SLUGIS/osm_visualization/blob/master/data/retrieve-day001
+
 
 Run:
 
-`$ ./retrieve-day arg1 arg2` && `$ ./retrieve-day arg3 arg4`
+`$ ./retrieve-day000 arg1 arg2` && `$ ./retrieve-day001 arg3 arg4`
 
 Where:
 
