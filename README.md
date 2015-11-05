@@ -12,7 +12,7 @@ https://github.com/SLUGIS/osm_visualization/blob/master/data/retrieve-day
 
 Run:
 
-`$ ./retrieve-day arg1 arg2`
+`$ ./retrieve-day arg1 arg2` && `$ ./retrieve-day arg3 arg4`
 
 Where:
 
