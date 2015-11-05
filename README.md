@@ -16,8 +16,11 @@ Run:
 
 Where:
 
-- arg1 is: 11/01/2013 = 415 (start file)
-- arg2 is: 11/01/2014 = 780 (end file)
+- arg1 is: 11/01/2014 = 780 (start file)
+- arg2 is: 06/08/2015 = 999 (end file)
+- for folder `/000`, moving to folder `/001`...
+- arg3 is: 11/01/2014 = 000 (start file)
+- arg4 is: 06/08/2015 = 149 (end file)
 
 The Script is based in : https://github.com/ericfischer/ebola/blob/master/retrieve-hourly
 
