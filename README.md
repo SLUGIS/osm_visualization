@@ -140,7 +140,7 @@ arg2: is the number of the last file that we downloaded before.
 
 Example:
 
-`~/projectmill$ python make-config-n.py 415 780`
+`~/osm_visualization$ python make-config-n.py 415 780`
 
 and then execute:
 
