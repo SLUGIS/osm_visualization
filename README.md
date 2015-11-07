@@ -100,7 +100,7 @@ Then we check the size of the image: in my case it's:  "width":939, "height":748
 
 #### Create a project in Tilemill:
 
-Create a project in Tilemill called sluosm2014, we used a north & south: https://github.com/SLUGIS/osm_visualization/tree/master/tilemill-project/sluosm2014n (e.g., North)
+Create a project in Tilemill called sluosm2014, we used a north & south: https://github.com/SLUGIS/osm_visualization/tree/master/tilemill-project/sluosm2014n (e.g., North). This project was stored in the `/usr/share/mapbox/project/` for this particular Ubuntu/Tilemill server install.
 
 #### Configuration in Projectmill
 
@@ -108,7 +108,7 @@ We need to configure this file https://github.com/SLUGIS/osm_visualization/blob/
 
     project={
             "source": "sluosm2014n", #name of projet in Tilemill
-            "destination": "slo"+ str(x),
+            "destination": "sl"+ str(x),
             "format": "png",
             "minzoom": 1,
             "maxzoom": 16,
@@ -118,7 +118,7 @@ We need to configure this file https://github.com/SLUGIS/osm_visualization/blob/
                     "Layer": [
                       {                                        
                                   "Datasource": {
-                                  "file": "/home/ubuntu/osm_visualization/data/slo"+str(x)+".geojson"  #directory of files for process
+                                  "file": "/home/ubuntu/osm_visualization/data/sl"+str(x)+".geojson"  #directory of files for process
                                 }
                   
                       }
@@ -135,8 +135,8 @@ Run:
 `$ python make-config-n.py arg1 arg2`
 
 where:
-arg1: is the number of the first file that we downloaded before.
-arg2: is the number of the last file that we downloaded before.
+arg1: is the number of the first file that was downloaded before.
+arg2: is the number of the last file that was downloaded before.
 
 Example:
 
