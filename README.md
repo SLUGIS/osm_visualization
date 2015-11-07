@@ -158,7 +158,6 @@ The first file is called slo415.png, so the tile-stitch file was named to slo414
 
 Example:
 
-`~/Documents/MapBox/export$ mogrify -format gif *.png && gifsicle *.gif > anim.gif`
-`~/Documents/MapBox/export$ gifsicle --loop=0 --colors 256 *.gif > anim.gif`
+`~/Documents/MapBox/export$ mogrify -format gif *.png && gifsicle *.gif > anim.gif && gifsicle --loop=0 --colors 256 *.gif > anim.gif`
 
 Source for making a gif: http://www.lcdf.org/gifsicle/man.html
