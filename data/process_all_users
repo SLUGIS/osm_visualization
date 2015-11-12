@@ -6,5 +6,5 @@ maxlon=$6
 
 for i in $(seq $1 $2)
 do
-	./get-edits-by-users $i.osc.gz $minlat $minlon $maxlat $maxlon > slo$i.geojson
+	./get-edits-by-users $i.osc.gz $minlat $minlon $maxlat $maxlon > sl$i.geojson
 done
