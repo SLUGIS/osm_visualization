@@ -100,7 +100,7 @@ Then we check the size of the image: in my case it's:  "width":939, "height":748
 
 #### Create a project in Tilemill:
 
-Create a project in Tilemill called sluosm2014, we used a north & south: https://github.com/SLUGIS/osm_visualization/tree/master/tilemill-project/sluosm2014n (e.g., North). This project was stored in the `/usr/share/mapbox/project/` for this particular Ubuntu/Tilemill server install.
+Create a project in Tilemill called sluosm2014, we used a north & south: https://github.com/SLUGIS/osm_visualization/tree/master/tilemill-project/sluosm2014n (e.g., North). This project was stored in the `~/Documents/MapBox/project` for this particular Ubuntu/Tilemill server install.
 
 #### Configuration in Projectmill
 
