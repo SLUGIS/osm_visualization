@@ -142,9 +142,9 @@ Example:
 
 `~/osm_visualization$ python make-config-n.py 415 780`
 
-and then execute:
+and then execute (`~/tilemill` is where this Tilemill is installed):
 
-`~/projectmill$ ./index.js --mill  --render  -c config.json -f -t /usr/share/tilemill`
+`~/projectmill$ ./index.js --mill  --render  -c config.json -f -t ~/tilemill`
 
 After:
 
